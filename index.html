@@ -143,9 +143,81 @@
             </div>
           </div>
 
-         
+          <!-- Row 2: AI Chat / New client acquisition -->
+          <div class="aav-block aav-chat">
+            <div class="aav-label" data-en="Combining Business with AI" data-de="Business trifft KI">Combining Business with AI</div>
+            <div class="aav-chat-feed">
+              <div class="aav-chat-row aav-chat-user">
+                <span class="aav-chat-bubble" data-en="Find high-value prospects for our UK expansion" data-de="Finde hochwertige Interessenten für unsere UK-Expansion">Find high-value prospects for our UK expansion</span>
+                <span class="aav-chat-avatar aav-chat-avatar--user">CEO</span>
+              </div>
+              <div class="aav-chat-row aav-chat-ai">
+                <span class="aav-chat-avatar aav-chat-avatar--ai">AI</span>
+                <span class="aav-chat-bubble aav-chat-bubble--ai">
+                  <span class="aav-typewriter" data-en="47 leads found. 12 warm contacts. Est. pipeline: £1.8M →" data-de="47 Leads gefunden. 12 warme Kontakte. Pipeline: 1,8 Mio. £ →">47 leads found. 12 warm contacts. Est. pipeline: £1.8M →</span>
+                  <span class="aav-cursor">▋</span>
+                </span>
+              </div>
+              <div class="aav-chat-tags">
+                <span class="aav-chat-tag">🎯 <span data-en="Leads" data-de="Leads">Leads</span></span>
+                <span class="aav-chat-tag">💼 <span data-en="Growth" data-de="Wachstum">Growth</span></span>
+                <span class="aav-chat-tag">⚡ <span data-en="Live" data-de="Live">Live</span></span>
+              </div>
+            </div>
+          </div>
 
-         </div>
+          <!-- Row 3: Animated world map SVG with connection arcs -->
+          <div class="aav-block aav-world">
+            <div class="aav-label" data-en="Global Reach &amp; Network" data-de="Globale Reichweite &amp; Netzwerk">Global Reach &amp; Network</div>
+            <div class="aav-world-vis">
+              <svg class="aav-world-svg" viewBox="0 0 340 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- subtle grid lines -->
+                <line x1="0" y1="70" x2="340" y2="70" stroke="rgba(26,108,196,0.08)" stroke-width="1"/>
+                <line x1="170" y1="0" x2="170" y2="140" stroke="rgba(26,108,196,0.08)" stroke-width="1"/>
+                <ellipse cx="170" cy="70" rx="155" ry="60" stroke="rgba(26,108,196,0.10)" stroke-width="1" stroke-dasharray="4 4"/>
+                <!-- Arcs above: US→UK, UK→EU, US→APAC (long) -->
+                <path class="aav-arc" d="M 68 62 Q 120 20 192 58" stroke="url(#arcGrad)" stroke-width="1.5" stroke-dasharray="5 3"/>
+                <path class="aav-arc" d="M 192 58 Q 220 40 248 65" stroke="url(#arcGrad)" stroke-width="1.5" stroke-dasharray="5 3"/>
+                <path class="aav-arc aav-arc--delay" d="M 68 62 Q 160 -10 280 72" stroke="url(#arcGrad2)" stroke-width="1" stroke-dasharray="4 4" opacity="0.5"/>
+                <!-- Arcs below (return paths): UK→US, APAC→UK, EU→US -->
+                <path class="aav-arc aav-arc--rev" d="M 192 58 Q 130 118 68 62" stroke="url(#arcGradRev)" stroke-width="1.2" stroke-dasharray="5 4" opacity="0.45"/>
+                <path class="aav-arc aav-arc--rev aav-arc--delay2" d="M 280 72 Q 200 130 68 62" stroke="url(#arcGradRev)" stroke-width="1" stroke-dasharray="4 5" opacity="0.30"/>
+                <path class="aav-arc aav-arc--rev aav-arc--delay3" d="M 248 65 Q 170 115 68 62" stroke="url(#arcGrad2)" stroke-width="0.9" stroke-dasharray="3 5" opacity="0.25"/>
+                <!-- Location dots -->
+                <!-- US -->
+                <circle class="aav-wdot" cx="68" cy="62" r="5" fill="var(--accent)" opacity="0.9"/>
+                <circle class="aav-wdot-ring" cx="68" cy="62" r="10" fill="none" stroke="var(--accent)" stroke-width="1.2" opacity="0.4"/>
+                <text x="68" y="80" text-anchor="middle" font-size="9" font-family="Inter,sans-serif" fill="var(--text-muted)" font-weight="600">US</text>
+                <!-- UK -->
+                <circle class="aav-wdot" cx="192" cy="58" r="5" fill="var(--accent)" opacity="0.9"/>
+                <circle class="aav-wdot-ring aav-wdot-ring--d1" cx="192" cy="58" r="10" fill="none" stroke="var(--accent)" stroke-width="1.2" opacity="0.4"/>
+                <text x="192" y="76" text-anchor="middle" font-size="9" font-family="Inter,sans-serif" fill="var(--text-muted)" font-weight="600">UK</text>
+                <!-- EU -->
+                <circle class="aav-wdot" cx="220" cy="55" r="3.5" fill="var(--accent-2)" opacity="0.7"/>
+                <text x="220" y="70" text-anchor="middle" font-size="8" font-family="Inter,sans-serif" fill="var(--text-muted)">EU</text>
+                <!-- APAC -->
+                <circle class="aav-wdot" cx="280" cy="72" r="3.5" fill="var(--accent-2)" opacity="0.6"/>
+                <text x="280" y="87" text-anchor="middle" font-size="8" font-family="Inter,sans-serif" fill="var(--text-muted)">APAC</text>
+                <!-- Gradients -->
+                <defs>
+                  <linearGradient id="arcGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#1a6cc4" stop-opacity="0.7"/>
+                    <stop offset="100%" stop-color="#2d83dd" stop-opacity="0.9"/>
+                  </linearGradient>
+                  <linearGradient id="arcGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#1a6cc4" stop-opacity="0.4"/>
+                    <stop offset="100%" stop-color="#2d83dd" stop-opacity="0.3"/>
+                  </linearGradient>
+                  <linearGradient id="arcGradRev" x1="100%" y1="0%" x2="0%" y2="0%">
+                    <stop offset="0%" stop-color="#2d83dd" stop-opacity="0.6"/>
+                    <stop offset="100%" stop-color="#1a6cc4" stop-opacity="0.8"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
   </div>
