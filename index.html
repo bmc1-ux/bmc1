@@ -1,70 +1,764 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BMC1 – First Choice for Business Management & Capital</title>
-    <style>
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; color: #222; }
-        header { background: #002244; color: white; padding: 60px 20px; text-align: center; }
-        header h1 { margin: 0; font-size: 2.5em; }
-        header p { font-size: 1.2em; margin-top: 10px; }
-        section { padding: 60px 20px; max-width: 1000px; margin: auto; }
-        h2 { color: #002244; }
-        .services { display: flex; flex-wrap: wrap; gap: 20px; }
-        .service { flex: 1 1 300px; background: #f4f4f4; padding: 20px; border-radius: 8px; }
-        footer { background: #002244; color: white; text-align: center; padding: 20px; }
-        a { color: #00bcd4; text-decoration: none; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BMC1 – First Choice for Business Management &amp; Capital</title>
+  <meta name="description" content="BMC1 – Your reliable partner for business growth, strategic consulting, and capital raising. US/UK and worldwide." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <header>
-        <h1>BMC1</h1>
-        <p>First Choice for Business Management & Capital</p>
-    </header>
+<!-- ═══════════════════════════════════════════════════════
+     NAVIGATION
+══════════════════════════════════════════════════════════ -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="#hero" class="nav-logo">
+      <span class="logo-pill">
+        <svg class="logo-pill-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="10" cy="10" r="9" fill="rgba(255,255,255,0.15)"/>
+          <!-- 3x3 dot grid -->
+          <circle cx="6.5"  cy="6.5"  r="1.1" fill="#ffffff"/>
+          <circle cx="10"   cy="6.5"  r="1.1" fill="#ffffff"/>
+          <circle cx="13.5" cy="6.5"  r="1.1" fill="#ffffff"/>
+          <circle cx="6.5"  cy="10"   r="1.1" fill="#ffffff"/>
+          <circle cx="10"   cy="10"   r="1.1" fill="#ffffff"/>
+          <circle cx="13.5" cy="10"   r="1.1" fill="#ffffff"/>
+          <circle cx="6.5"  cy="13.5" r="1.1" fill="#ffffff"/>
+          <circle cx="10"   cy="13.5" r="1.1" fill="#ffffff"/>
+          <circle cx="13.5" cy="13.5" r="1.1" fill="#ffffff"/>
+        </svg>
+        <span class="logo-pill-text">BMC<span class="logo-one">1</span></span>
+      </span>
+    </a>
 
-    <section>
-        <h2>About Us</h2>
-        <p>BMC1 is your reliable partner for business growth, strategic consulting, and capital raising.</p>
-    </section>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about" data-en="About" data-de="Über uns">About</a></li>
+      <li><a href="#services" data-en="Services" data-de="Leistungen">Services</a></li>
+      <li><a href="#process" data-en="Process" data-de="Prozess">Process</a></li>
+      <li><a href="#pricing" data-en="Pricing" data-de="Preise">Pricing</a></li>
+      <li><a href="#faq" data-en="FAQ" data-de="FAQ">FAQ</a></li>
+      <li><a href="#booking" data-en="Book" data-de="Termin">Book</a></li>
+    </ul>
 
-    <section>
-        <h2>Our Services</h2>
-        <div class="services">
-            <div class="service">
-                <h3>Business Management</h3>
-                <p>Strategic consulting, restructuring, and operational excellence for sustainable success. For clients in US/UK and everywhere it matters.</p>
-            </div>
-            <div class="service">
-                <h3>Capital Raising</h3>
-                <p>Financing strategies, investor matchmaking, and M&A advisory with the goal to create demand in your product & services to reach the next step.</p>
-            </div>
-            <div class="service">
-                <h3>Scale-up & Grow</h3>
-                <p>Coaching, funding rounds, market analysis, and growth strategies.</p>
-            </div>
+    <div class="nav-actions">
+      <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+        <span class="lang-active" id="langLabel">EN</span>
+        <span class="lang-sep">/</span>
+        <span class="lang-inactive" id="langAlt">DE</span>
+      </button>
+      <a href="#contact" class="btn btn-primary btn-nav" data-en="Get Started" data-de="Loslegen">Get Started</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════════════════ -->
+<section class="hero" id="hero">
+  <canvas class="hero-canvas" id="heroCanvas"></canvas>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      <span data-en="Combining Business with AI" data-de="Business trifft KI">Combining Business with AI</span>
+    </div>
+    <h1 class="hero-title">
+      <span data-en="Partner for" data-de="Partner für">Partner for</span>
+      <span class="hero-gradient" data-en="Business Growth &amp; Capital" data-de="Unternehmenswachstum &amp; Kapital">Business Growth &amp; Capital</span>
+      <span data-en="for UK, US &amp; Worldwide" data-de="für UK, USA &amp; weltweit">for UK, US &amp; Worldwide</span>
+    </h1>
+    <p class="hero-sub" data-en="BMC1 combines deep business expertise with cutting-edge AI — delivering smarter strategy, faster capital, and real growth across the US, UK, and beyond." data-de="BMC1 verbindet tiefes Business-Know-how mit modernster KI – für klügere Strategie, schnelleres Kapital und echtes Wachstum in den USA, UK und darüber hinaus.">
+      BMC1 combines deep business expertise with cutting-edge AI — delivering smarter strategy, faster capital, and real growth across the US, UK, and beyond.
+    </p>
+    <div class="hero-ctas">
+      <a href="#booking" class="btn btn-primary btn-large" data-en="Book a Free Call" data-de="Kostenloses Gespräch">Book a Free Call</a>
+      <a href="#services" class="btn btn-ghost btn-large" data-en="Explore Services" data-de="Leistungen erkunden">Explore Services</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span data-en="Scroll to explore" data-de="Scrollen Sie weiter">Scroll to explore</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     ABOUT
+══════════════════════════════════════════════════════════ -->
+<section class="section section-dark" id="about">
+  <div class="container">
+    <div class="about-wrapper">
+      <div class="about-text fade-in">
+        <div class="section-badge" data-en="About Us" data-de="Über uns">About Us</div>
+        <h2 data-en="Who We Are" data-de="Wer wir sind">Who We Are</h2>
+        <p data-en="BMC1 is your reliable partner for business growth, strategic consulting, and capital raising. We work with founders, executives, and investors across the US, UK, and wherever it matters — delivering results that move the needle." data-de="BMC1 ist Ihr zuverlässiger Partner für Unternehmenswachstum, strategische Beratung und Kapitalbeschaffung. Wir arbeiten mit Gründern, Führungskräften und Investoren in den USA, Großbritannien und überall dort, wo es darauf ankommt.">
+          BMC1 is your reliable partner for business growth, strategic consulting, and capital raising. We work with founders, executives, and investors across the US, UK, and wherever it matters — delivering results that move the needle.
+        </p>
+        <p data-en="Our multidisciplinary team combines deep financial expertise, operational know-how, and global networks to unlock new opportunities for our clients." data-de="Unser multidisziplinäres Team vereint tiefes Finanzwissen, operatives Know-how und globale Netzwerke, um neue Chancen für unsere Kunden zu erschließen.">
+          Our multidisciplinary team combines deep financial expertise, operational know-how, and global networks to unlock new opportunities for our clients.
+        </p>
+        <div class="about-highlights">
+          <div class="highlight-item">
+            <span class="highlight-icon">🌍</span>
+            <span data-en="Online and on demand, globally active" data-de="Online und auf Abruf, global aktiv">Online and on demand, globally active</span>
+          </div>
+          <div class="highlight-item">
+            <span class="highlight-icon">🤝</span>
+            <span data-en="Trusted by founders, SMEs &amp; investors" data-de="Vertraut von Gründern, KMUs &amp; Investoren">Trusted by founders, SMEs &amp; investors</span>
+          </div>
+          <div class="highlight-item">
+            <span class="highlight-icon">📈</span>
+            <span data-en="End-to-end from strategy to execution" data-de="Von der Strategie bis zur Umsetzung">End-to-end from strategy to execution</span>
+          </div>
         </div>
-    </section>
+        <a href="#contact" class="btn btn-primary" data-en="Work with us" data-de="Zusammenarbeiten">Work with us</a>
+      </div>
+      <div class="about-visual fade-in">
+        <div class="about-anim-wrap">
 
-    <section>
-        <h2>Get In Touch </h2>
-        <p> Email: <a href="mailto:mail@bmc1.co.uk">mail@bmc1.co.uk</a></p>
-        <p> Mail: P. Bartscherer iDeliverd 9091 2 Lansdowne Rd, Croydon London, CR9 2ER, United Kingdom</p>
-    </section>
+          <!-- Row 1: From Plan to Execution (pipeline) -->
+          <div class="aav-block aav-pipeline">
+            <div class="aav-label" data-en="From Plan to Execution" data-de="Von der Planung zur Umsetzung">From Plan to Execution</div>
+            <div class="aav-pipeline-track">
+              <div class="aav-pip-step aav-pip-done">
+                <span class="pip-icon">📋</span>
+                <span class="pip-text" data-en="Plan" data-de="Plan">Plan</span>
+              </div>
+              <div class="aav-pip-connector"><span class="aav-pip-arrow">→</span></div>
+              <div class="aav-pip-step aav-pip-active">
+                <span class="pip-icon">⚙️</span>
+                <span class="pip-text" data-en="Build" data-de="Aufbau">Build</span>
+              </div>
+              <div class="aav-pip-connector"><span class="aav-pip-arrow">→</span></div>
+              <div class="aav-pip-step aav-pip-pending">
+                <span class="pip-icon">🚀</span>
+                <span class="pip-text" data-en="Execute" data-de="Umsetzung">Execute</span>
+              </div>
+            </div>
+          </div>
 
-    <footer>
-        &copy; 2025 BMC1 – All rights reserved. The website and all associated services are owned and operated by the company registered under ID Number 20258239374 in the Company Register of Colorado. The company’s principal office is located at 1500 N Grant St, Suite N, Denver, CO 80203, US. 
-    </footer>
+          <!-- Row 2: AI Chat / New client acquisition -->
+          <div class="aav-block aav-chat">
+            <div class="aav-label" data-en="Combining Business with AI" data-de="Business trifft KI">Combining Business with AI</div>
+            <div class="aav-chat-feed">
+              <div class="aav-chat-row aav-chat-user">
+                <span class="aav-chat-bubble" data-en="Find high-value prospects for our UK expansion" data-de="Finde hochwertige Interessenten für unsere UK-Expansion">Find high-value prospects for our UK expansion</span>
+                <span class="aav-chat-avatar aav-chat-avatar--user">CEO</span>
+              </div>
+              <div class="aav-chat-row aav-chat-ai">
+                <span class="aav-chat-avatar aav-chat-avatar--ai">AI</span>
+                <span class="aav-chat-bubble aav-chat-bubble--ai">
+                  <span class="aav-typewriter" data-en="47 leads found. 12 warm contacts. Est. pipeline: £1.8M →" data-de="47 Leads gefunden. 12 warme Kontakte. Pipeline: 1,8 Mio. £ →">47 leads found. 12 warm contacts. Est. pipeline: £1.8M →</span>
+                  <span class="aav-cursor">▋</span>
+                </span>
+              </div>
+              <div class="aav-chat-tags">
+                <span class="aav-chat-tag">🎯 <span data-en="Leads" data-de="Leads">Leads</span></span>
+                <span class="aav-chat-tag">💼 <span data-en="Growth" data-de="Wachstum">Growth</span></span>
+                <span class="aav-chat-tag">⚡ <span data-en="Live" data-de="Live">Live</span></span>
+              </div>
+            </div>
+          </div>
 
+          <!-- Row 3: Animated world map SVG with connection arcs -->
+          <div class="aav-block aav-world">
+            <div class="aav-label" data-en="Global Reach &amp; Network" data-de="Globale Reichweite &amp; Netzwerk">Global Reach &amp; Network</div>
+            <div class="aav-world-vis">
+              <svg class="aav-world-svg" viewBox="0 0 340 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- subtle grid lines -->
+                <line x1="0" y1="70" x2="340" y2="70" stroke="rgba(26,108,196,0.08)" stroke-width="1"/>
+                <line x1="170" y1="0" x2="170" y2="140" stroke="rgba(26,108,196,0.08)" stroke-width="1"/>
+                <ellipse cx="170" cy="70" rx="155" ry="60" stroke="rgba(26,108,196,0.10)" stroke-width="1" stroke-dasharray="4 4"/>
+                <!-- Arcs above: US→UK, UK→EU, US→APAC (long) -->
+                <path class="aav-arc" d="M 68 62 Q 120 20 192 58" stroke="url(#arcGrad)" stroke-width="1.5" stroke-dasharray="5 3"/>
+                <path class="aav-arc" d="M 192 58 Q 220 40 248 65" stroke="url(#arcGrad)" stroke-width="1.5" stroke-dasharray="5 3"/>
+                <path class="aav-arc aav-arc--delay" d="M 68 62 Q 160 -10 280 72" stroke="url(#arcGrad2)" stroke-width="1" stroke-dasharray="4 4" opacity="0.5"/>
+                <!-- Arcs below (return paths): UK→US, APAC→UK, EU→US -->
+                <path class="aav-arc aav-arc--rev" d="M 192 58 Q 130 118 68 62" stroke="url(#arcGradRev)" stroke-width="1.2" stroke-dasharray="5 4" opacity="0.45"/>
+                <path class="aav-arc aav-arc--rev aav-arc--delay2" d="M 280 72 Q 200 130 68 62" stroke="url(#arcGradRev)" stroke-width="1" stroke-dasharray="4 5" opacity="0.30"/>
+                <path class="aav-arc aav-arc--rev aav-arc--delay3" d="M 248 65 Q 170 115 68 62" stroke="url(#arcGrad2)" stroke-width="0.9" stroke-dasharray="3 5" opacity="0.25"/>
+                <!-- Location dots -->
+                <!-- US -->
+                <circle class="aav-wdot" cx="68" cy="62" r="5" fill="var(--accent)" opacity="0.9"/>
+                <circle class="aav-wdot-ring" cx="68" cy="62" r="10" fill="none" stroke="var(--accent)" stroke-width="1.2" opacity="0.4"/>
+                <text x="68" y="80" text-anchor="middle" font-size="9" font-family="Inter,sans-serif" fill="var(--text-muted)" font-weight="600">US</text>
+                <!-- UK -->
+                <circle class="aav-wdot" cx="192" cy="58" r="5" fill="var(--accent)" opacity="0.9"/>
+                <circle class="aav-wdot-ring aav-wdot-ring--d1" cx="192" cy="58" r="10" fill="none" stroke="var(--accent)" stroke-width="1.2" opacity="0.4"/>
+                <text x="192" y="76" text-anchor="middle" font-size="9" font-family="Inter,sans-serif" fill="var(--text-muted)" font-weight="600">UK</text>
+                <!-- EU -->
+                <circle class="aav-wdot" cx="220" cy="55" r="3.5" fill="var(--accent-2)" opacity="0.7"/>
+                <text x="220" y="70" text-anchor="middle" font-size="8" font-family="Inter,sans-serif" fill="var(--text-muted)">EU</text>
+                <!-- APAC -->
+                <circle class="aav-wdot" cx="280" cy="72" r="3.5" fill="var(--accent-2)" opacity="0.6"/>
+                <text x="280" y="87" text-anchor="middle" font-size="8" font-family="Inter,sans-serif" fill="var(--text-muted)">APAC</text>
+                <!-- Gradients -->
+                <defs>
+                  <linearGradient id="arcGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#1a6cc4" stop-opacity="0.7"/>
+                    <stop offset="100%" stop-color="#2d83dd" stop-opacity="0.9"/>
+                  </linearGradient>
+                  <linearGradient id="arcGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#1a6cc4" stop-opacity="0.4"/>
+                    <stop offset="100%" stop-color="#2d83dd" stop-opacity="0.3"/>
+                  </linearGradient>
+                  <linearGradient id="arcGradRev" x1="100%" y1="0%" x2="0%" y2="0%">
+                    <stop offset="0%" stop-color="#2d83dd" stop-opacity="0.6"/>
+                    <stop offset="100%" stop-color="#1a6cc4" stop-opacity="0.8"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     SERVICES
+══════════════════════════════════════════════════════════ -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge" data-en="What We Do" data-de="Was wir tun">What We Do</div>
+      <h2 data-en="Our Services" data-de="Unsere Leistungen">Our Services</h2>
+      <p data-en="Three core disciplines. One mission: accelerate your business." data-de="Drei Kerndisziplinen. Eine Mission: Ihr Unternehmen beschleunigen.">Three core disciplines. One mission: accelerate your business.</p>
+    </div>
+    <div class="services-grid services-grid-3">
+      <div class="service-card service-card-large fade-in">
+        <div class="service-icon">🏢</div>
+        <h3 data-en="Business Management" data-de="Business Management">Business Management</h3>
+        <p data-en="Strategic consulting, restructuring, and operational excellence for sustainable success. We partner with companies in the US, UK and everywhere it matters — aligning leadership, processes, and resources to drive lasting impact." data-de="Strategische Beratung, Restrukturierung und operative Exzellenz für nachhaltigen Erfolg. Wir arbeiten mit Unternehmen in den USA, UK und überall, wo es darauf ankommt – und richten Führung, Prozesse und Ressourcen auf dauerhaften Erfolg aus.">Strategic consulting, restructuring, and operational excellence for sustainable success. We partner with companies in the US, UK and everywhere it matters — aligning leadership, processes, and resources to drive lasting impact.</p>
+        <ul class="service-bullets">
+          <li data-en="Strategic consulting &amp; restructuring" data-de="Strategische Beratung &amp; Restrukturierung">Strategic consulting &amp; restructuring</li>
+          <li data-en="Operational excellence programs" data-de="Programme für operative Exzellenz">Operational excellence programs</li>
+          <li data-en="Leadership alignment" data-de="Führungskräfte-Alignment">Leadership alignment</li>
+        </ul>
+        <a href="#contact" class="service-link" data-en="Learn more →" data-de="Mehr erfahren →">Learn more →</a>
+      </div>
+      <div class="service-card service-card-large fade-in service-card-highlight">
+        <div class="service-icon">💰</div>
+        <h3 data-en="Capital Raising" data-de="Kapitalbeschaffung">Capital Raising</h3>
+        <p data-en="Financing strategies, investor matchmaking, and M&A advisory — with the goal to create demand for your product &amp; services and reach the next step. We connect you to the right capital at the right time." data-de="Finanzierungsstrategien, Investor-Matchmaking und M&A-Beratung – mit dem Ziel, Nachfrage für Ihre Produkte &amp; Dienstleistungen zu schaffen und den nächsten Schritt zu machen.">Financing strategies, investor matchmaking, and M&amp;A advisory — with the goal to create demand for your product &amp; services and reach the next step. We connect you to the right capital at the right time.</p>
+        <ul class="service-bullets">
+          <li data-en="Investor matchmaking &amp; deal structuring" data-de="Investor-Matching &amp; Deal-Strukturierung">Investor matchmaking &amp; deal structuring</li>
+          <li data-en="M&amp;A advisory" data-de="M&amp;A-Beratung">M&amp;A advisory</li>
+          <li data-en="Financing &amp; debt strategies" data-de="Finanzierungs- &amp; Schuldenstrategien">Financing &amp; debt strategies</li>
+        </ul>
+        <a href="#contact" class="service-link" data-en="Learn more →" data-de="Mehr erfahren →">Learn more →</a>
+      </div>
+      <div class="service-card service-card-large fade-in">
+        <div class="service-icon">🚀</div>
+        <h3 data-en="Scale-up &amp; Grow" data-de="Scale-up &amp; Wachstum">Scale-up &amp; Grow</h3>
+        <p data-en="Coaching, funding rounds, market analysis, and growth strategies tailored to your stage and ambition. Whether you're a founder ready for Series A or an SME expanding internationally — we build the roadmap and execute with you." data-de="Coaching, Finanzierungsrunden, Marktanalysen und Wachstumsstrategien, die auf Ihre Phase und Ihre Ambitionen zugeschnitten sind.">Coaching, funding rounds, market analysis, and growth strategies tailored to your stage and ambition. Whether you're a founder ready for Series A or an SME expanding internationally — we build the roadmap and execute with you.</p>
+        <ul class="service-bullets">
+          <li data-en="Funding rounds &amp; investor readiness" data-de="Finanzierungsrunden &amp; Investor-Readiness">Funding rounds &amp; investor readiness</li>
+          <li data-en="Market analysis &amp; expansion" data-de="Marktanalyse &amp; Expansion">Market analysis &amp; expansion</li>
+          <li data-en="Growth coaching &amp; execution" data-de="Wachstumscoaching &amp; Umsetzung">Growth coaching &amp; execution</li>
+        </ul>
+        <a href="#contact" class="service-link" data-en="Learn more →" data-de="Mehr erfahren →">Learn more →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     PROCESS
+══════════════════════════════════════════════════════════ -->
+<section class="section section-dark" id="process">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge" data-en="How We Work" data-de="Wie wir arbeiten">How We Work</div>
+      <h2 data-en="Our Proven Process" data-de="Unser bewährter Prozess">Our Proven Process</h2>
+      <p data-en="A structured, transparent methodology that gets results — every time." data-de="Eine strukturierte, transparente Methodik, die jedes Mal Ergebnisse liefert.">A structured, transparent methodology that gets results — every time.</p>
+    </div>
+    <div class="process-timeline">
+      <div class="process-step fade-in">
+        <div class="step-number">01</div>
+        <div class="step-content">
+          <h3 data-en="Discovery" data-de="Entdeckung">Discovery</h3>
+          <p data-en="We dive deep into your business, data infrastructure, and goals to identify the highest-impact AI opportunities." data-de="Wir tauchen tief in Ihr Unternehmen, Ihre Dateninfrastruktur und Ihre Ziele ein, um die wirkungsvollsten KI-Chancen zu identifizieren.">We dive deep into your business, data infrastructure, and goals to identify the highest-impact AI opportunities.</p>
+        </div>
+      </div>
+      <div class="process-connector"></div>
+      <div class="process-step fade-in">
+        <div class="step-number">02</div>
+        <div class="step-content">
+          <h3 data-en="Strategy" data-de="Strategie">Strategy</h3>
+          <p data-en="We design a tailored AI roadmap with clear milestones, KPIs, and a realistic implementation plan aligned to your budget." data-de="Wir entwickeln eine maßgeschneiderte KI-Roadmap mit klaren Meilensteinen, KPIs und einem realistischen Implementierungsplan.">We design a tailored AI roadmap with clear milestones, KPIs, and a realistic implementation plan aligned to your budget.</p>
+        </div>
+      </div>
+      <div class="process-connector"></div>
+      <div class="process-step fade-in">
+        <div class="step-number">03</div>
+        <div class="step-content">
+          <h3 data-en="Implementation" data-de="Implementierung">Implementation</h3>
+          <p data-en="Our engineers build, test, and deploy AI solutions in agile sprints — with full transparency and regular progress updates." data-de="Unsere Ingenieure bauen, testen und implementieren KI-Lösungen in agilen Sprints – mit voller Transparenz und regelmäßigen Updates.">Our engineers build, test, and deploy AI solutions in agile sprints — with full transparency and regular progress updates.</p>
+        </div>
+      </div>
+      <div class="process-connector"></div>
+      <div class="process-step fade-in">
+        <div class="step-number">04</div>
+        <div class="step-content">
+          <h3 data-en="Scale" data-de="Skalierung">Scale</h3>
+          <p data-en="We help you scale successful AI initiatives across your organization, continuously optimizing for performance and ROI." data-de="Wir helfen Ihnen, erfolgreiche KI-Initiativen im gesamten Unternehmen zu skalieren und kontinuierlich für Performance und ROI zu optimieren.">We help you scale successful AI initiatives across your organization, continuously optimizing for performance and ROI.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     PRICING
+══════════════════════════════════════════════════════════ -->
+<section class="section" id="pricing">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge" data-en="Investment" data-de="Investition">Investment</div>
+      <h2 data-en="Transparent Pricing" data-de="Transparente Preise">Transparent Pricing</h2>
+      <p data-en="Choose the package that fits your stage. No hidden fees, no surprises." data-de="Wählen Sie das Paket, das zu Ihrer Phase passt. Keine versteckten Kosten, keine Überraschungen.">Choose the package that fits your stage. No hidden fees, no surprises.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="pricing-card fade-in">
+        <div class="pricing-tier" data-en="Starter" data-de="Starter">Starter</div>
+        <div class="pricing-price">
+          <span class="price-currency">£</span>
+          <span class="price-amount">2,500</span>
+          <span class="price-period" data-en="/month" data-de="/Monat">/month</span>
+        </div>
+        <p class="pricing-desc" data-en="Perfect for SMEs taking their first steps." data-de="Ideal für KMUs, die ihre ersten Schritte machen.">Perfect for SMEs taking their first steps.</p>
+        <ul class="pricing-features">
+          <li><span class="feat-check">✓</span> <span data-en="Assessment" data-de="Assessment">Assessment</span></li>
+          <li><span class="feat-check">✓</span> <span data-en="Improve Sales Framework" data-de="Vertriebsframework optimieren">Improve Sales Framework</span></li>
+          <li><span class="feat-check">✓</span> <span data-en="Monthly Strategy Session" data-de="Monatliche Strategiesitzung">Monthly Strategy Session</span></li>
+          <li><span class="feat-check">✓</span> <span data-en="Email & Chat Support" data-de="E-Mail & Chat-Support">Email & Chat Support</span></li>
+          <li class="feat-inactive"><span class="feat-cross">✗</span> <span data-en="Custom Model Training" data-de="Benutzerdefiniertes Modelltraining">Custom Model Training</span></li>
+          <li class="feat-inactive"><span class="feat-cross">✗</span> <span data-en="On-site Consulting" data-de="Vor-Ort-Beratung">On-site Consulting</span></li>
+        </ul>
+        <!-- STRIPE: STARTER_LINK -->
+        <a href="https://buy.stripe.com/3cI6oH9Y69AS4lz2k8dIA00" target="_blank" rel="noopener" class="btn btn-outline btn-full" data-en="Get Started" data-de="Loslegen">Get Started</a>
+      </div>
+
+      <div class="pricing-card pricing-card-featured fade-in">
+        <div class="pricing-badge" data-en="Most Popular" data-de="Beliebteste">Most Popular</div>
+        <div class="pricing-tier" data-en="Growth" data-de="Wachstum">Growth</div>
+        <div class="pricing-price">
+          <span class="price-currency">£</span>
+          <span class="price-amount">7,500</span>
+          <span class="price-period" data-en="/month" data-de="/Monat">/month</span>
+        </div>
+        <p class="pricing-desc" data-en="For scaling businesses ready to operationalize." data-de="Für wachsende Unternehmen, die skalieren wollen.">For scaling businesses ready to operationalize.</p>
+        <ul class="pricing-features">
+          <li><span class="feat-check">✓</span> <span data-en="Everything in Starter" data-de="Alles aus Starter">Everything in Starter</span></li>
+          <li><span class="feat-check">✓</span> <span data-en="Sales Use Case" data-de="Vertriebs-Anwendungsfall">Sales Use Case</span></li>
+          <li><span class="feat-check">✓</span> <span data-en="Evaluate Capital Measures" data-de="Kapitalmaßnahmen bewerten">Evaluate Capital Measures</span></li>
+          <li><span class="feat-check">✓</span> <span data-en="Weekly Strategy Sessions" data-de="Wöchentliche Strategiesitzungen">Weekly Strategy Sessions</span></li>
+          <li><span class="feat-check">✓</span> <span data-en="Priority Support" data-de="Prioritäts-Support">Priority Support</span></li>
+          <li class="feat-inactive"><span class="feat-cross">✗</span> <span data-en="On-site Consulting" data-de="Vor-Ort-Beratung">On-site Consulting</span></li>
+        </ul>
+        <!-- STRIPE: GROWTH_LINK  -->
+        <a href="https://buy.stripe.com/cNicN5gmucN42drf6UdIA01" target="_blank" rel="noopener" class="btn btn-primary btn-full" data-en="Get Started" data-de="Loslegen">Get Started</a>
+      </div>
+
+      <div class="pricing-card fade-in">
+        <div class="pricing-tier" data-en="Enterprise" data-de="Unternehmen">Enterprise</div>
+        <div class="pricing-price">
+          <span class="price-amount" data-en="Custom" data-de="Individuell">Custom</span>
+        </div>
+        <p class="pricing-desc" data-en="Tailored transformation for large organisations." data-de="Maßgeschneiderte Transformation für große Organisationen.">Tailored transformation for large organisations.</p>
+        <ul class="pricing-features">
+          <li><span class="feat-check">✓</span> <span data-en="Everything in Growth" data-de="Alles aus Wachstum">Everything in Growth</span></li>
+          <li><span class="feat-check">✓</span> <span data-en="Dedicated Use Case" data-de="Dedizierter Anwendungsfall">Dedicated Use Case</span></li>
+          <li><span class="feat-check">✓</span> <span data-en="Finance &amp; Sales Ops" data-de="Finanzen &amp; Vertriebsoperationen">Finance &amp; Sales Ops</span></li>
+          <li><span class="feat-check">✓</span> <span data-en="Executive Workshops" data-de="Executive-Workshops">Executive Workshops</span></li>
+          <li><span class="feat-check">✓</span> <span data-en="24/7 Support & SLA" data-de="24/7 Support & SLA">24/7 Support & SLA</span></li>
+          <li><span class="feat-check">✓</span> <span data-en="On-site Consulting" data-de="Vor-Ort-Beratung">On-site Consulting</span></li>
+        </ul>
+        <a href="#contact" class="btn btn-outline btn-full" data-en="Contact Us" data-de="Kontakt">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     FAQ
+══════════════════════════════════════════════════════════ -->
+<section class="section section-dark" id="faq">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge" data-en="Questions" data-de="Fragen">Questions</div>
+      <h2 data-en="Frequently Asked Questions" data-de="Häufig gestellte Fragen">Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question">
+          <span data-en="How long does a typical project take?" data-de="Wie lange dauert ein typisches Projekt?">How long does a typical project take?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p data-en="Project timelines vary by scope. A focused proof-of-concept typically takes 4–8 weeks. Full enterprise AI transformations can span 6–18 months. We always provide a detailed timeline in our proposal." data-de="Projektzeitpläne variieren je nach Umfang. Ein fokussierter Proof-of-Concept dauert typischerweise 4–8 Wochen. Vollständige Enterprise-KI-Transformationen können 6–18 Monate dauern.">Project timelines vary by scope. A focused proof-of-concept typically takes 4–8 weeks. Full enterprise AI transformations can span 6–18 months. We always provide a detailed timeline in our proposal.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span data-en="Do we need a large dataset to get started?" data-de="Brauchen wir einen großen Datensatz, um zu beginnen?">Do we need a large dataset to get started?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p data-en="Not necessarily. We work with you on data strategy from the start, including synthetic data generation, transfer learning, and small-data AI techniques. Good data quality matters more than volume." data-de="Nicht unbedingt. Wir arbeiten mit Ihnen von Anfang an an einer Datenstrategie, einschließlich synthetischer Datengenerierung und Transfer-Learning-Techniken.">Not necessarily. We work with you on data strategy from the start, including synthetic data generation, transfer learning, and small-data AI techniques. Good data quality matters more than volume.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span data-en="What industries do you specialise in?" data-de="Auf welche Branchen sind Sie spezialisiert?">What industries do you specialise in?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p data-en="We have deep experience in finance, healthcare, retail, manufacturing, and professional services. Our methodology is industry-agnostic, but we bring domain-specific AI knowledge to every engagement." data-de="Wir haben umfangreiche Erfahrung in Finanzwesen, Gesundheitswesen, Einzelhandel, Fertigung und professionellen Dienstleistungen.">We have deep experience in finance, healthcare, retail, manufacturing, and professional services. Our methodology is industry-agnostic, but we bring domain-specific AI knowledge to every engagement.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span data-en="How do you ensure data privacy and security?" data-de="Wie gewährleisten Sie Datenschutz und -sicherheit?">How do you ensure data privacy and security?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p data-en="Data security is paramount. We operate under strict NDAs, follow GDPR/UK GDPR compliance, use encrypted data pipelines, and can work within your existing security infrastructure." data-de="Datensicherheit hat höchste Priorität. Wir arbeiten unter strengen NDAs, halten DSGVO/UK DSGVO-Konformität ein und verwenden verschlüsselte Datenpipelines.">Data security is paramount. We operate under strict NDAs, follow GDPR/UK GDPR compliance, use encrypted data pipelines, and can work within your existing security infrastructure.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span data-en="What ROI can we realistically expect?" data-de="Welchen ROI können wir realistisch erwarten?">What ROI can we realistically expect?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p data-en="Our clients average a 3x ROI within 12 months of deployment. Results depend on use case, data quality, and organizational readiness — we'll help you model expected returns before you commit." data-de="Unsere Kunden erzielen im Durchschnitt einen 3-fachen ROI innerhalb von 12 Monaten nach der Implementierung. Ergebnisse hängen vom Anwendungsfall, der Datenqualität und der Unternehmensbereitschaft ab.">Our clients average a 3x ROI within 12 months of deployment. Results depend on use case, data quality, and organizational readiness — we'll help you model expected returns before you commit.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     TEAM
+══════════════════════════════════════════════════════════ -->
+<section class="section" id="team">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge" data-en="AI-Powered" data-de="KI-gestützt">AI-Powered</div>
+      <h2 data-en="Our AI Agent Suite" data-de="Unsere KI-Agenten">Our AI Agent Suite</h2>
+      <p data-en="Specialized agents working autonomously across research, growth, and capital — so every engagement is backed by real-time intelligence." data-de="Spezialisierte Agenten, die autonom in Recherche, Wachstum und Kapital arbeiten – damit jedes Mandat durch Echtzeit-Intelligenz unterstützt wird.">Specialized agents working autonomously across research, growth, and capital — so every engagement is backed by real-time intelligence.</p>
+    </div>
+
+    <!-- AI Agents -->
+    <div class="ai-agents-label fade-in">
+      <span class="agents-line"></span>
+      <span class="agents-label-text" data-en="AI Agents — Active 24 / 7" data-de="KI-Agenten — Aktiv 24 / 7">AI Agents — Active 24 / 7</span>
+      <span class="agents-line"></span>
+    </div>
+    <div class="agents-grid fade-in">
+
+      <div class="agent-card">
+        <div class="agent-icon">🌐</div>
+        <div class="agent-name" data-en="Market Intelligence Agent" data-de="Marktintelligenz-Agent">Market Intelligence Agent</div>
+        <div class="agent-tags"><span class="agent-tag">Real-time</span><span class="agent-tag">Global</span></div>
+        <div class="agent-desc" data-en="Continuously scans macro trends, sector shifts, and competitor moves across US, UK, and EU markets. Surfaces opportunities before they become consensus." data-de="Scannt kontinuierlich Makrotrends, Branchenverschiebungen und Konkurrenzaktivitäten in den USA, UK und EU. Identifiziert Chancen, bevor sie zum Konsens werden.">Continuously scans macro trends, sector shifts, and competitor moves across US, UK, and EU markets. Surfaces opportunities before they become consensus.</div>
+        <ul class="agent-features">
+          <li data-en="Live news &amp; regulatory monitoring" data-de="Live-Nachrichten &amp; Regulierungsmonitoring">Live news &amp; regulatory monitoring</li>
+          <li data-en="Competitor signal tracking" data-de="Wettbewerbs-Signal-Tracking">Competitor signal tracking</li>
+          <li data-en="Sector valuation benchmarks" data-de="Sektorale Bewertungs-Benchmarks">Sector valuation benchmarks</li>
+        </ul>
+      </div>
+
+      <div class="agent-card">
+        <div class="agent-icon">🚀</div>
+        <div class="agent-name" data-en="Growth Strategy Agent" data-de="Wachstumsstrategie-Agent">Growth Strategy Agent</div>
+        <div class="agent-tags"><span class="agent-tag">Scale-up</span><span class="agent-tag">GTM</span></div>
+        <div class="agent-desc" data-en="Designs go-to-market plans, expansion roadmaps, and revenue models tailored to your stage — from pre-seed to Series B and beyond." data-de="Entwickelt Go-to-Market-Pläne, Expansions-Roadmaps und Umsatzmodelle, abgestimmt auf Ihre Phase – von Pre-Seed bis Series B und darüber hinaus.">Designs go-to-market plans, expansion roadmaps, and revenue models tailored to your stage — from pre-seed to Series B and beyond.</div>
+        <ul class="agent-features">
+          <li data-en="Customer acquisition modelling" data-de="Kundenakquisitions-Modellierung">Customer acquisition modelling</li>
+          <li data-en="International expansion playbooks" data-de="Internationale Expansions-Playbooks">International expansion playbooks</li>
+          <li data-en="Unit economics &amp; burn analysis" data-de="Unit Economics &amp; Burn-Analyse">Unit economics &amp; burn analysis</li>
+        </ul>
+      </div>
+
+      <div class="agent-card">
+        <div class="agent-icon">💼</div>
+        <div class="agent-name" data-en="Capital &amp; Deal Agent" data-de="Kapital- &amp; Deal-Agent">Capital &amp; Deal Agent</div>
+        <div class="agent-tags"><span class="agent-tag">M&amp;A</span><span class="agent-tag">Fundraising</span></div>
+        <div class="agent-desc" data-en="Matches companies with the right investors, structures term sheets, and prepares data rooms — shortening deal cycles from months to weeks." data-de="Verbindet Unternehmen mit den richtigen Investoren, strukturiert Term Sheets und bereitet Data Rooms vor – Dealzyklen von Monaten auf Wochen verkürzt.">Matches companies with the right investors, structures term sheets, and prepares data rooms — shortening deal cycles from months to weeks.</div>
+        <ul class="agent-features">
+          <li data-en="Investor fit scoring &amp; outreach" data-de="Investor-Fit-Scoring &amp; Outreach">Investor fit scoring &amp; outreach</li>
+          <li data-en="Automated data room assembly" data-de="Automatisierte Data-Room-Erstellung">Automated data room assembly</li>
+          <li data-en="Term sheet &amp; cap table modelling" data-de="Term Sheet &amp; Cap Table Modellierung">Term sheet &amp; cap table modelling</li>
+        </ul>
+      </div>
+
+      <div class="agent-card">
+        <div class="agent-icon">📈</div>
+        <div class="agent-name" data-en="Financial Analysis Agent" data-de="Finanzanalyse-Agent">Financial Analysis Agent</div>
+        <div class="agent-tags"><span class="agent-tag">Forecasting</span><span class="agent-tag">KPIs</span></div>
+        <div class="agent-desc" data-en="Builds dynamic financial models, scenario analyses, and KPI dashboards — turning raw data into board-ready insights in real time." data-de="Erstellt dynamische Finanzmodelle, Szenarioanalysen und KPI-Dashboards – rohe Daten werden in Echtzeit zu board-ready Insights.">Builds dynamic financial models, scenario analyses, and KPI dashboards — turning raw data into board-ready insights in real time.</div>
+        <ul class="agent-features">
+          <li data-en="3-statement &amp; DCF modelling" data-de="3-Statement- &amp; DCF-Modellierung">3-statement &amp; DCF modelling</li>
+          <li data-en="Cash flow &amp; runway forecasting" data-de="Cash-Flow- &amp; Runway-Prognose">Cash flow &amp; runway forecasting</li>
+          <li data-en="Automated reporting &amp; alerts" data-de="Automatisiertes Reporting &amp; Alerts">Automated reporting &amp; alerts</li>
+        </ul>
+      </div>
+
+      <div class="agent-card">
+        <div class="agent-icon">✍️</div>
+        <div class="agent-name" data-en="Content &amp; Pitch Agent" data-de="Content- &amp; Pitch-Agent">Content &amp; Pitch Agent</div>
+        <div class="agent-tags"><span class="agent-tag">Decks</span><span class="agent-tag">Narrative</span></div>
+        <div class="agent-desc" data-en="Crafts investor-grade pitch decks, executive memos, and business proposals — aligned with what top-tier VCs and institutional investors actually want to see." data-de="Erstellt investorenwürdige Pitch-Decks, Executive Memos und Geschäftsvorschläge – ausgerichtet auf das, was Top-VCs und institutionelle Investoren sehen wollen.">Crafts investor-grade pitch decks, executive memos, and business proposals — aligned with what top-tier VCs and institutional investors actually want to see.</div>
+        <ul class="agent-features">
+          <li data-en="Pitch deck structuring &amp; copy" data-de="Pitch-Deck-Strukturierung &amp; Texte">Pitch deck structuring &amp; copy</li>
+          <li data-en="One-pager &amp; teaser creation" data-de="One-Pager &amp; Teaser-Erstellung">One-pager &amp; teaser creation</li>
+          <li data-en="Multilingual business writing" data-de="Mehrsprachiges Business Writing">Multilingual business writing</li>
+        </ul>
+      </div>
+
+      <div class="agent-card">
+        <div class="agent-icon">⚙️</div>
+        <div class="agent-name" data-en="Operations Agent" data-de="Operations-Agent">Operations Agent</div>
+        <div class="agent-tags"><span class="agent-tag">Automation</span><span class="agent-tag">Ops</span></div>
+        <div class="agent-desc" data-en="Automates repetitive workflows, integrates tools, and monitors operational KPIs — so leadership can focus on decisions, not admin." data-de="Automatisiert wiederkehrende Workflows, integriert Tools und überwacht operative KPIs – damit die Führung sich auf Entscheidungen konzentrieren kann, nicht auf Administration.">Automates repetitive workflows, integrates tools, and monitors operational KPIs — so leadership can focus on decisions, not admin.</div>
+        <ul class="agent-features">
+          <li data-en="CRM &amp; pipeline automation" data-de="CRM- &amp; Pipeline-Automatisierung">CRM &amp; pipeline automation</li>
+          <li data-en="Cross-tool integration &amp; APIs" data-de="Tool-übergreifende Integration &amp; APIs">Cross-tool integration &amp; APIs</li>
+          <li data-en="SOP creation &amp; process mapping" data-de="SOP-Erstellung &amp; Prozess-Mapping">SOP creation &amp; process mapping</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     BOOKING / CALENDAR
+══════════════════════════════════════════════════════════ -->
+<section class="section section-dark" id="booking">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge" data-en="Schedule" data-de="Termin">Schedule</div>
+      <h2 data-en="Book a Consultation" data-de="Beratung buchen">Book a Consultation</h2>
+      <p data-en="Select a date below and choose your preferred time slot. Our team will confirm within 2 hours." data-de="Wählen Sie unten ein Datum und Ihre bevorzugte Uhrzeit. Unser Team bestätigt innerhalb von 2 Stunden.">Select a date below and choose your preferred time slot. Our team will confirm within 2 hours.</p>
+    </div>
+
+    <div class="booking-wrapper">
+      <!-- Calendar -->
+      <div class="calendar-panel">
+        <div class="calendar-header">
+          <button class="cal-nav" id="calPrev" aria-label="Previous month">‹</button>
+          <span class="cal-month-year" id="calTitle"></span>
+          <button class="cal-nav" id="calNext" aria-label="Next month">›</button>
+        </div>
+        <div class="calendar-weekdays">
+          <span data-en="Su" data-de="So">Su</span>
+          <span data-en="Mo" data-de="Mo">Mo</span>
+          <span data-en="Tu" data-de="Di">Tu</span>
+          <span data-en="We" data-de="Mi">We</span>
+          <span data-en="Th" data-de="Do">Th</span>
+          <span data-en="Fr" data-de="Fr">Fr</span>
+          <span data-en="Sa" data-de="Sa">Sa</span>
+        </div>
+        <div class="calendar-grid" id="calGrid"></div>
+      </div>
+
+      <!-- Time Slots -->
+      <div class="timeslot-panel">
+        <div class="timeslot-date" id="slotDate">
+          <span data-en="Select a date to see available times" data-de="Wählen Sie ein Datum für verfügbare Zeiten">Select a date to see available times</span>
+        </div>
+        <div class="timeslots" id="timeslots">
+          <div class="timeslot-placeholder">
+            <div class="placeholder-icon">📅</div>
+          </div>
+        </div>
+        <!-- FORMSPREE: Gleicher Code wie Kontaktformular — DEIN_FORMSPREE_CODE ersetzen -->
+        <div class="booking-form" id="bookingForm" style="display:none;">
+          <div class="form-group">
+            <input type="text" class="form-input" id="bookName" name="name" placeholder=" " required />
+            <label class="form-label" for="bookName" data-en="Your Name *" data-de="Ihr Name *">Your Name *</label>
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-input" id="bookEmail" name="email" placeholder=" " />
+            <label class="form-label" for="bookEmail" data-en="Email Address" data-de="E-Mail-Adresse">Email Address</label>
+          </div>
+          <div class="form-group">
+            <input type="tel" class="form-input" id="bookPhone" name="phone" placeholder=" " />
+            <label class="form-label" for="bookPhone" data-en="Phone Number" data-de="Telefonnummer">Phone Number</label>
+          </div>
+          <p class="booking-hint" data-en="Please provide email or phone number." data-de="Bitte E-Mail oder Telefonnummer angeben.">Please provide email or phone number.</p>
+          <button class="btn btn-primary btn-full" id="confirmBook">
+            <span data-en="Confirm Booking" data-de="Buchung bestätigen">Confirm Booking</span>
+            <span class="btn-arrow">→</span>
+          </button>
+        </div>
+        <div class="booking-confirmed" id="bookingConfirmed" style="display:none;">
+          <div class="confirmed-icon">✓</div>
+          <p data-en="Booking request sent! We'll confirm shortly." data-de="Buchungsanfrage gesendet! Wir bestätigen in Kürze.">Booking request sent! We'll confirm shortly.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     CONTACT
+══════════════════════════════════════════════════════════ -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge" data-en="Get in Touch" data-de="Kontakt">Get in Touch</div>
+      <h2 data-en="Contact the Company" data-de="Kontakt zum Unternehmen">Contact the Company</h2>
+      <p data-en="Ready to grow? Fill out the form and we'll get back to you within 24 hours." data-de="Bereit zu wachsen? Füllen Sie das Formular aus und wir melden uns innerhalb von 24 Stunden.">Ready to grow? Fill out the form and we'll get back to you within 24 hours.</p>
+    </div>
+    <div class="contact-wrapper">
+      <div class="contact-info">
+        <div class="contact-detail">
+          <div>
+            <strong data-en="Email" data-de="E-Mail">Email</strong>
+            <p><a href="mailto:mail@bmc1.co.uk">mail@bmc1.co.uk</a></p>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div>
+            <strong data-en="UK Mail" data-de="UK Post">UK Mail</strong>
+            <p>P. Bartscherer / iDeliverd 9091<br>2 Lansdowne Rd, Croydon<br>London, CR9 2ER<br>United Kingdom</p>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div>
+            <strong data-en="US Mail" data-de="US Post">US Mail</strong>
+            <p>1500 N Grant St, Suite N<br>Denver, CO 80203<br>United States</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FORMSPREE: Ersetze DEIN_FORMSPREE_CODE mit deinem Code von formspree.io/f/DEIN_CODE -->
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <input type="text" class="form-input" id="cName" name="name" placeholder=" " required />
+            <label class="form-label" for="cName" data-en="Full Name *" data-de="Vollständiger Name *">Full Name *</label>
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-input" id="cEmail" name="email" placeholder=" " required />
+            <label class="form-label" for="cEmail" data-en="Email Address *" data-de="E-Mail-Adresse *">Email Address *</label>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <input type="text" class="form-input" id="cCompany" name="company" placeholder=" " />
+            <label class="form-label" for="cCompany" data-en="Company" data-de="Unternehmen">Company</label>
+          </div>
+          <div class="form-group">
+            <select class="form-input form-select" id="cService" name="service">
+              <option value="" data-en="Select a Service" data-de="Leistung wählen">Select a Service</option>
+              <option value="bm" data-en="Business Management" data-de="Business Management">Business Management</option>
+              <option value="capital" data-en="Capital Raising" data-de="Kapitalbeschaffung">Capital Raising</option>
+              <option value="scaleup" data-en="Scale-up &amp; Grow" data-de="Scale-up &amp; Wachstum">Scale-up &amp; Grow</option>
+              <option value="ma" data-en="M&amp;A Advisory" data-de="M&amp;A-Beratung">M&amp;A Advisory</option>
+              <option value="other" data-en="Other / Not sure" data-de="Sonstiges / Unsicher">Other / Not sure</option>
+            </select>
+            <label class="form-label" for="cService" data-en="Service" data-de="Leistung">Service</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <textarea class="form-input form-textarea" id="cMessage" name="message" placeholder=" " required></textarea>
+          <label class="form-label" for="cMessage" data-en="Tell us about your project *" data-de="Erzählen Sie uns von Ihrem Projekt *">Tell us about your project *</label>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full btn-submit" id="contactSubmit">
+          <span data-en="Send Message" data-de="Nachricht senden">Send Message</span>
+          <span class="btn-arrow">→</span>
+        </button>
+        <div class="form-success" id="formSuccess" style="display:none;">
+          <span>✓</span> <span data-en="Message sent! We'll be in touch soon." data-de="Nachricht gesendet! Wir melden uns bald.">Message sent! We'll be in touch soon.</span>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#hero" class="nav-logo">
+          <span class="logo-pill">
+        <svg class="logo-pill-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="10" cy="10" r="9" fill="rgba(255,255,255,0.15)"/>
+          <!-- 3x3 dot grid -->
+          <circle cx="6.5"  cy="6.5"  r="1.1" fill="#ffffff"/>
+          <circle cx="10"   cy="6.5"  r="1.1" fill="#ffffff"/>
+          <circle cx="13.5" cy="6.5"  r="1.1" fill="#ffffff"/>
+          <circle cx="6.5"  cy="10"   r="1.1" fill="#ffffff"/>
+          <circle cx="10"   cy="10"   r="1.1" fill="#ffffff"/>
+          <circle cx="13.5" cy="10"   r="1.1" fill="#ffffff"/>
+          <circle cx="6.5"  cy="13.5" r="1.1" fill="#ffffff"/>
+          <circle cx="10"   cy="13.5" r="1.1" fill="#ffffff"/>
+          <circle cx="13.5" cy="13.5" r="1.1" fill="#ffffff"/>
+        </svg>
+        <span class="logo-pill-text">BMC<span class="logo-one">1</span></span>
+      </span>
+        </a>
+        <p data-en="First Choice for Business Management &amp; Capital — your reliable partner for growth, consulting, and capital raising." data-de="Erste Wahl für Business Management &amp; Capital – Ihr zuverlässiger Partner für Wachstum, Beratung und Kapitalbeschaffung.">First Choice for Business Management &amp; Capital — your reliable partner for growth, consulting, and capital raising.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4 data-en="Services" data-de="Leistungen">Services</h4>
+          <ul>
+            <li><a href="#services" data-en="Business Management" data-de="Business Management">Business Management</a></li>
+            <li><a href="#services" data-en="Capital Raising" data-de="Kapitalbeschaffung">Capital Raising</a></li>
+            <li><a href="#services" data-en="Scale-up &amp; Grow" data-de="Scale-up &amp; Wachstum">Scale-up &amp; Grow</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-en="Company" data-de="Unternehmen">Company</h4>
+          <ul>
+            <li><a href="#about" data-en="About Us" data-de="Über uns">About Us</a></li>
+            <li><a href="#process" data-en="Our Process" data-de="Unser Prozess">Our Process</a></li>
+            <li><a href="#pricing" data-en="Pricing" data-de="Preise">Pricing</a></li>
+            <li><a href="#faq" data-en="FAQ" data-de="FAQ">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-en="Contact" data-de="Kontakt">Contact</h4>
+          <ul>
+            <li><a href="mailto:mail@bmc1.co.uk">mail@bmc1.co.uk</a></li>
+            <li><a href="#booking" data-en="Book a Call" data-de="Termin buchen">Book a Call</a></li>
+            <li><span style="color:var(--text-muted);font-size:0.82rem;">London, UK · Denver, CO US</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>
+        <p data-en="© 2025 BMC1 – All rights reserved." data-de="© 2025 BMC1 – Alle Rechte vorbehalten.">© 2025 BMC1 – All rights reserved.</p>
+        <p class="footer-legal-note" data-en="The website and all associated services are owned and operated by the company registered under ID Number 20258239374 in the Company Register of Colorado. Principal office: 1500 N Grant St, Suite N, Denver, CO 80203, US." data-de="Die Website und alle damit verbundenen Dienste werden von dem Unternehmen betrieben, das unter der ID-Nummer 20258239374 im Handelsregister von Colorado eingetragen ist. Hauptbüro: 1500 N Grant St, Suite N, Denver, CO 80203, USA.">The website and all associated services are owned and operated by the company registered under ID Number 20258239374 in the Company Register of Colorado. Principal office: 1500 N Grant St, Suite N, Denver, CO 80203, US.</p>
+      </div>
+      <div class="footer-legal">
+        <a href="privacy-policy.html" data-en="Privacy Policy" data-de="Datenschutzrichtlinie">Privacy Policy</a>
+        <a href="terms-of-service.html" data-en="Terms of Service" data-de="Nutzungsbedingungen">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
